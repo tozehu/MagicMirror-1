@@ -1,6 +1,7 @@
-FROM amd64/alpine:latest
+FROM alpine:latest
 
-RUN apk update
+RUN apk update && apk upgrade && \
+    apk add --no-cache bash git
 
 ENV NODE_ENV production
 WORKDIR /opt/magic_mirror
@@ -10,7 +11,7 @@ RUN cp -R modules /opt/default_modules
 RUN cp -R config /opt/default_config
 RUN npm install --unsafe-perm --silent
 
-COPY mm-docker-config.js docker-entrypoint.sh ./
+COPY server-only-default-config.js docker-entrypoint.sh ./
 RUN chmod +x ./docker-entrypoint.sh
 
 EXPOSE 8080
