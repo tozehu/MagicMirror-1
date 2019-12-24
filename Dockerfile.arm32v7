@@ -19,6 +19,7 @@ RUN cp -R modules /opt/default_modules
 RUN cp -R config /opt/default_config
 RUN npm install --unsafe-perm --silent
 
+COPY server-only-default-config.js /opt/magic_mirror/config/config.js 
 COPY server-only-default-config.js docker-entrypoint.sh ./
 RUN chmod +x ./docker-entrypoint.sh
 
