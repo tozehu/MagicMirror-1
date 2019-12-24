@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 RUN apk update && apk upgrade && \
-    apk add -- update bash git npm
+    apk add --update bash git npm
 
 ENV NODE_ENV production
 WORKDIR /opt/magic_mirror
