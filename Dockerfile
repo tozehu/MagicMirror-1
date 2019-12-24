@@ -1,4 +1,8 @@
-FROM alpine:latest
+ENV GOOS=linux \
+    GOARCH=arm \
+    GOARM=7
+
+FROM arm32v7/alpine:latest
 
 RUN apk update && apk upgrade && \
     apk add --no-cache bash git
