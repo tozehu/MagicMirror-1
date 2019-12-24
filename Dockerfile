@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM node:lts-alpine
 
 RUN apk update && apk upgrade && \
     apk add --update bash git npm

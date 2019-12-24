@@ -6,7 +6,7 @@ if [ ! "$(ls -A /opt/magic_mirror/modules)" ]; then
 fi
 
 if [ ! "$(ls -A /opt/magic_mirror/config)" ]; then
-    cp /opt/magic_mirror/mm-docker-config.js /opt/magic_mirror/config/config.js
+    cp /opt/magic_mirror/server-only-default-config.js /opt/magic_mirror/config/config.js
 fi
 
 exec "$@"
