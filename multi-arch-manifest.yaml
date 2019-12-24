@@ -1,15 +1,15 @@
-image: trion/ng-cli:latest
+image: cbrosius/magicmirror:latest
 manifests:
-  - image: trion/ng-cli:latest-amd64
+  - image: cbrosius/magicmirror:latest-amd64
     platform:
       architecture: amd64
       os: linux
-  - image: trion/ng-cli:latest-arm64v8
+  - image: cbrosius/magicmirror:latest-arm64v8
     platform:
       architecture: arm64
       os: linux
       variant: v8
-  - image: trion/ng-cli:latest-arm32v7
+  - image: cbrosius/magicmirror:latest-arm32v7
     platform:
       architecture: arm
       os: linux
