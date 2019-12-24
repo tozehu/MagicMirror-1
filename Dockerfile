@@ -5,8 +5,9 @@ ENV GOOS=linux \
 FROM arm32v7/alpine:latest
 
 RUN apk update && apk upgrade && \
-    apk add --no-cache bash git
-
+    apk add --no-cache bash git && \
+    apk add --update npm
+    
 ENV NODE_ENV production
 WORKDIR /opt/magic_mirror
 
