@@ -8,3 +8,7 @@ So I decided to try MultiArch-Compiling via Docker-Hub by myself.
 After the compiling worked, I changed the initial Config a little bit, so that you will get a working Server-Only Container right out of the box.
 
 I can only test arm32 and amd64 by myself, so arm64 is compiled but not tested.
+
+Finally I added a german sample-config-file because that is what I am trying to use by myself.
+
+If you have any comments, please let me know via my Blog (https://christian.flixblog.de/2019/12/26/magicmirror/)
