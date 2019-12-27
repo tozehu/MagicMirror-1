@@ -9,7 +9,9 @@ FROM arm32v7/node:alpine
 COPY --from=qemu_arm32 qemu-arm-static /usr/bin
 
 RUN apk update && apk upgrade && \
-    apk add --update bash git npm
+    apk add --update bash git npm && \
+    rm -rf /var/lib/apt/lists/* && \
+    rm /var/cache/apk/*
 
 ENV NODE_ENV production
 WORKDIR /opt/magic_mirror
