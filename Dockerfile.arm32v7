@@ -27,6 +27,8 @@ COPY server-only-default-config.js docker-entrypoint.sh ./
 COPY server-only-default-config.js /opt/magic_mirror/config/config.js
 RUN chmod +x ./docker-entrypoint.sh
 
+VOLUME [ "/opt/magic_mirror/config", "/opt/magic_mirror/modules" ]
+
 EXPOSE 8080
 ENTRYPOINT ["./docker-entrypoint.sh"]
 CMD ["node", "serveronly"]
