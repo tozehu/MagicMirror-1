@@ -15,8 +15,6 @@ RUN apk update && apk upgrade && \
 
 ENV NODE_ENV production
 
-ENV ARCH arm32v7
-
 WORKDIR /opt/magic_mirror
 
 RUN git clone --depth 1 -b master https://github.com/MichMich/MagicMirror.git .
@@ -28,8 +26,6 @@ COPY server-only-german-sample-config.js ./
 COPY server-only-default-config.js docker-entrypoint.sh ./
 COPY server-only-default-config.js /opt/magic_mirror/config/config.js
 RUN chmod +x ./docker-entrypoint.sh
-
-VOLUME [ "/opt/magic_mirror/config", "/opt/magic_mirror/modules" ]
 
 EXPOSE 8080
 ENTRYPOINT ["./docker-entrypoint.sh"]
