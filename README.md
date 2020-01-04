@@ -5,7 +5,7 @@ When I started to test MagicMirror with the original Docker-Image (https://hub.d
 
 So I decided to try MultiArch-Compiling via Docker-Hub by myself.
 
-After the compiling worked, I changed the initial Config a little bit, so that you will get a working Server-Only Container right out of the box.
+After the compiling worked, I changed the initial Config a little bit, so that you will get a working Server-Only Container right out of the box that you can access with just a browser.
 
 I can only test arm32 and amd64 by myself, so arm64 is compiled but not tested.
 
